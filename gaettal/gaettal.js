@@ -1,0 +1,33 @@
+let computerGuess;
+gaetTal();
+function gaetTal() {
+  computerGuess = Math.round(Math.random() * 100);
+  console.log("computerGuess", computerGuess);
+}
+
+document.querySelector("#tjek").addEventListener("click", () => {
+  let userGuess = document.querySelector("#tal").value;
+  userGuess = parseInt(userGuess);
+  console.log("userGuess", typeof userGuess);
+  //   numberOfGuesses++;
+
+  if (userGuess === computerGuess) {
+    alert("Tillykke!");
+    document.querySelector("#tjek").disabled = true;
+  } else if (userGuess < computerGuess) {
+    alert("For lavt. Prøv igen.");
+  } else {
+    alert("For højt. Prøv igen.");
+  }
+});
+
+//
+//   } else if (userGuess < targetNumber) {
+//     alert("For lavt. Prøv igen.");
+//   } else {
+//     alert("For højt. Prøv igen.");
+//   }
+// if (userGuess === "") {
+// alert("Indtast venligst et tal.");
+//return;
+//}
