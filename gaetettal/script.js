@@ -41,6 +41,7 @@ let forll = forl(50, 100);
 console.log(forll);
 
 function rigt() {
+  document.querySelector("rigtigt").disabled = true;
   console.log("rigtigt");
 }
 
