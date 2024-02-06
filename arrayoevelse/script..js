@@ -46,6 +46,17 @@ console.log(str);
 str += "Du!";
 console.log(str);
 
+let num = 2;
+console.log(num);
+num *= 4;
+console.log(num);
+
+let i = 0;
+console.log(i);
+i += 2;
+i += 2;
+console.log(i);
+
 // function testParms(a, b, c, d) {
 //   console.log(`a: ${a}$, b: ${b}, c: ${c}, d:${d}`);
 // }

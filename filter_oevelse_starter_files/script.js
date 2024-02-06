@@ -13,7 +13,25 @@ const vehicles = [
 
 const ulPointer = document.querySelector("ul");
 
-showTheseVehicles(vehicles);
+function isElectric(vehicle) {
+  if (vehicle.isElectric === true) {
+    return vehicle;
+  }
+}
+
+const allElectricVehicles = vehicles.filter(isElectric);
+
+showTheseVehicles(allElectricVehicles);
+
+function moreThanTwoSeats(vehicle) {
+  if (vehicle.passengers > 1) {
+    return vehicle;
+  }
+}
+
+const moreThanTwoVehicle = vehicles.filter(moreThanTwoSeats);
+
+showTheseVehicles(moreThanTwoVehicle);
 
 function showTheseVehicles(arr) {
   arr.forEach((each) => {
