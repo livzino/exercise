@@ -1,17 +1,24 @@
 "use strict";
+// sæt en værdi for det højeste og laveste tal, computeren skal gætte imellem
+
 let lownum = 0;
 let highnum = 100;
+
+// Brug let i stedet for const - Da det er en variabel som ændre sig
 let computerGuess;
-let h1 = document.querySelector("h1");
+
+let computerGuessText = document.querySelector("h1");
+let numberOfGuesses = 0;
 //document.querySelector(".forhoejt").addEventListener("click", forh);
 //document.querySelector(".forlavt").addEventListener("click", forl);
-document.querySelector(".forhoejt").addEventListener("click", tooLowOrHigh);
-document.querySelector(".forlavt").addEventListener("click", tooLowOrHigh);
+document.querySelector("#forhoejt").addEventListener("click", tooLowOrHigh);
+document.querySelector("#forlavt").addEventListener("click", tooLowOrHigh);
 
-computerGuess();
-function computerGuess() {
+computerGuesses();
+function computerGuesses() {
+  numberOfGuesses++;
   computerGuess = Math.round(lownum + (highnum - lownum) / 2);
-  h1.TexttextContent = `jeg gætter på ${computerGuess}`;
+  computerGuessText.textContent = `jeg gætter på ${computerGuess}`;
 }
 
 function tooLowOrHigh(evt) {
@@ -21,7 +28,7 @@ function tooLowOrHigh(evt) {
   } else {
     highnum = computerGuess;
   }
-  computerGuess();
+  computerGuesses();
 }
 
 //gaetTal();
