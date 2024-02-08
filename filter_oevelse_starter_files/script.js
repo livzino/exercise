@@ -31,7 +31,7 @@ function moreThanTwoSeats(vehicle) {
 
 const moreThanTwoVehicle = vehicles.filter(moreThanTwoSeats);
 
-showTheseVehicles(moreThanTwoVehicle);
+showTheseVehicles(vehicles);
 
 function showTheseVehicles(arr) {
   arr.forEach((each) => {
