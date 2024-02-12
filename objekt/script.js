@@ -71,8 +71,13 @@ const student2 = {
 student1.firstName = student2.firstName;
 student1.lastName = student2.lastName;
 
+
+
 if (student1 == student2) {
   console.log("they are the same");
 } else {
   console.log("they are not");
 }
+
+// selvom vi laver 2 ens objekter vil de ikke være det samme selvom de er ens, fordi det er
+// to objekter. Hvis man fjerner det ene objekt og bare skriver student2 = student1, vil de være ens.
