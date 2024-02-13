@@ -1,32 +1,25 @@
-// "use strict";
+"use strict";
+const firstName = "Peter";
+const name = "Mandu";
+const type = "cat";
+const len = name.length;
 
-// const firstName = "Peter";
-// const name = "Mandu";
-// const type = "cat";
-// const len = name.length;
+console.log(`My name is ${firstName}.\nI have a ${type} called ${name}`);
+document.querySelector("p").textContent = `My name is ${firstName}.\nI have a ${type} called ${name}`;
+console.log(`${name} is ${len} characters long`);
 
-// console.log(`My name is ${firstName}.\n
-// I have a ${type} called ${name}`);
+const letter = name[0];
+console.log(`the first letter of ${name} is ${letter}`);
+const dumbledore = "Albus Percival Wulfric Brian Dumbledore";
 
-// document.querySelector("p").textContent = `My name is ${firstName}.\n
-// I have a ${type} called ${name}`;
+const dumlen = dumbledore.length;
+console.log(dumlen);
 
-// console.log(`${name} is ${len} characters long`);
+const indeks2 = dumbledore[6];
+console.log(indeks2);
 
-// const letter = name[0];
-// console.log(`the first letter of ${name} is ${letter}`);
-
-// const dumbledore = "Albus Percival Wulfric Brian Dumbledore";
-
-// const dumlen = dumbledore.length;
-
-// console.log(dumlen);
-
-// const indeks2 = dumbledore[6];
-// console.log(indeks2);
-
-// console.log(dumbledore.indexOf("D"));
-// console.log(dumbledore.lastIndexOf("e"));
+console.log(dumbledore.indexOf("D"));
+console.log(dumbledore.lastIndexOf("e"));
 
 const fullName = "Klaus Mandal";
 const firname = fullName.substring(0, 5);

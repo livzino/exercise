@@ -1,0 +1,33 @@
+[data-filter="hawaii"] {
+  --bg: rgb(77, 243, 199);
+  color: rgb(213, 38, 120);
+  --border: double 10px rgb(255, 224, 69);
+}
+
+[data-filter="dark"] {
+  --bg: rgb(60, 63, 76);
+  color: rgb(7, 22, 9);
+  --border: solid 10px rgb(61, 40, 135);
+}
+[data-filter="light"] {
+  --bg: rgb(244, 178, 225);
+  color: rgb(160, 82, 174);
+  --hr: white;
+  --border: dotted 10px rgb(255, 55, 139);
+}
+
+body {
+  margin-left: 100px;
+  margin-top: 50px;
+  margin-right: 100px;
+  background: var(--bg);
+  border: var(--border);
+  padding-bottom: 300px;
+}
+h1 {
+  font-size: 150px;
+}
+
+hr {
+  color: var(--hr);
+}
