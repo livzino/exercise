@@ -1,0 +1,7 @@
+/* body {
+  background-color: hsl var();
+} */
+
+body {
+  background-color: hsl(200, 74%, var(--i));
+}
