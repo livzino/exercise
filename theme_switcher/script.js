@@ -1,6 +1,9 @@
 "use strict";
 
-document.querySelector("#themes").addEventListener("click", theChange);
+const themes = document.querySelector("#themes");
+let currenTheme = "light";
+
+themes.addEventListener("click", theChange);
 
 function theChange(evt) {
   document.querySelector("body").dataset.filter = evt.target.value;
