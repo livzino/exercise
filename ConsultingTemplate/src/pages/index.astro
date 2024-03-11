@@ -1,8 +1,11 @@
 ---
+import Nav from "../components/Nav.astro";
 import Headingpill from "../components/Headingpill.astro";
 import Button from "../components/Button.astro";
 import Card from "../components/Card.astro"
 import Scrolling from "../components/Scrolling.astro";
+import Footer from "../components/Footer.astro";
+
 ---
 
 <html lang="en">
@@ -26,12 +29,17 @@ import Scrolling from "../components/Scrolling.astro";
 <link rel="stylesheet" href="../styles/reset.css">
 <title>Astro</title>
 	</head>
+	
 	<body>
-		<h1>Astro</h1>
+
+<Nav />
+	
+
 		<Headingpill />
 		<Button />
 		<Card />
 		<Scrolling />
+		<Footer />
 	</body>
 </html>
 
