@@ -8,6 +8,8 @@ import Footer from "../components/Footer.astro";
 import Facecards from "../components/Facecards.astro";
 import "../styles/global.css"
 import { Icon } from "astro-icon/components";
+import Base from "../layouts/Base.astro";
+import Columns from "../components/Columns.astro";
 
 ---
 
@@ -34,20 +36,25 @@ import { Icon } from "astro-icon/components";
 	</head>
 	
 	<body>
-
+<Base>
 <Nav />
 
 <div class="containerabout">
+
 	<img src="./images/heroimage.jpg" alt="heroimage" class="imghero">
 
 	<div class="services">
 			<Headingpill />
 		<h2>Creative Services For Boost Your Business Growth</h2>
 	</div>
+
 </div>
 <!-- ------------------------- -->
-<div class="flexh2box">
-<div>
+
+<section>
+<Columns col="2">
+	
+	<div>
 	<Headingpill />
 <h3 class="turnyour">Turn your ideas into reality.</h3>
 
@@ -58,7 +65,8 @@ import { Icon } from "astro-icon/components";
 <figure>
 <img src="./images/h2photo.jpg" alt="" class="h2img">
 </figure>
-</div>
+</Columns>
+</section>
 <!-- -------------------------- -->
 <section class="flex4">
 <div>
@@ -92,12 +100,14 @@ import { Icon } from "astro-icon/components";
 <Button />
 </div>
 	</div>
-<div class="cardsflex">
+
+	<Columns cols="4">
 <Card />
 <Card />
 <Card />
 <Card />
-</div>
+</Columns>
+
 </div>
 </div>
 <!-- ----------------------- -->
@@ -134,11 +144,29 @@ import { Icon } from "astro-icon/components";
 		<Scrolling />
 
 	</body>
+</Base>
 </html>
 
 <style>
 
 	/********************************* Heroimage */
+
+  section {
+    display: grid;
+    grid:
+      auto /
+      [full-start] 1fr
+      [content] minmax(0, var(--content-width))
+      1fr [full-end];
+    gap: 6rem 4rem;
+
+    > * {
+      grid-column: content;
+    }
+
+    .full {
+      grid-column: full;
+    }}
 h1{
 	 font-family: "Lato", sans-serif;
 }
