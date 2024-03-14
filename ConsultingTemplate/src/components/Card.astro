@@ -4,9 +4,118 @@ import { Icon } from "astro-icon/components";
 
 <article class="card">  
     <Icon name="folder" />
+   
+    <h3>Creative Ideas</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.</p>
+<p class="readmore">Read more</p>
+ 
 </article>
+
+
+
+
 <style>  
 [data-icon="folder"] {    
     width: 3.3rem;    
     height: 3.3rem;  }
+
+:root {
+  /* Colors */
+  --card-surface: #E5E5E5;
+  --info-box-surface: #fff;
+
+  --color-option-1: #000;
+  --color-option-2: #EFDBB8;
+  --color-option-3: #D8DEFF;
+
+  --card-like-btn-surface: #fff;
+  --card-like-btn-color: #000;
+
+  /* Spacing */
+  --card-padding: 1rem;
+  --info-box-padding: 1.25rem;
+  --info-box-gap: 1rem;
+  --card-option-gap: 1ch;
+
+  /* Dimensions */
+  --card-option-width: 1.25rem;
+  --card-option-height: 1.25rem;
+
+  --card-like-btn-width: 1.5rem;
+  --card-like-btn-height: 1.5rem;
+
+  /* Font sizes */
+  --card-title: .8rem;
+  --card-price: 1.35rem;
+
+  /* border-radii */
+  --card-radius: calc(var(--card-padding) + var(--info-box-radius));
+  --info-box-radius: 1.75rem;
+  --card-button-radius: 1e5px;
+}
+
+.card{
+    display: flex;
+width: 14.125rem;
+flex-direction: column;
+align-items: flex-start;
+gap: 0.625rem;
+  padding: var(--card-padding);
+border-radius:var(  --card-radius);
+background: white;
+}
+/*.card {
+  max-width: 400px;
+  background: var(--card-surface);
+
+   
+
+}
+*/
+h3{
+    color: #181818;
+
+font-family: Cabin;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 600;
+line-height: 116%; /* 1.45rem */
+}
+p{
+color: #595566;
+
+font-family: Lato;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 147.5%; /* 1.475rem */
+}
+.readmore{
+    color: #181818;
+
+font-family: Lato;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 600;
+line-height: 160%; /* 1.8rem */
+}
+.tekst{
+border-radius:var(--info-box-radius);
+  background:var(--info-box-surface);
+  padding:var(  --info-box-padding);
+  gap:var(--info-box-gap);
+}
+
+
+
+button{
+    border-radius:var(  --card-button-radius);
+  width: var(--card-like-btn-width);
+  height: var(  --card-like-btn-height);
+}
+
+
+
+
+
     </style>

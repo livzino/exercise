@@ -5,6 +5,9 @@ import Button from "../components/Button.astro";
 import Card from "../components/Card.astro"
 import Scrolling from "../components/Scrolling.astro";
 import Footer from "../components/Footer.astro";
+import Facecards from "../components/Facecards.astro";
+import "../styles/global.css"
+import { Icon } from "astro-icon/components";
 
 ---
 
@@ -25,29 +28,321 @@ import Footer from "../components/Footer.astro";
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Hind+Vadodara&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">	
 <!-- link til stylesheets -->
-<link rel="stylesheet" href="../styles/global.css">
-<link rel="stylesheet" href="../styles/reset.css">
+<link rel="stylesheet" href="../styles/global.css" />
+<link rel="stylesheet" href="../styles/reset.css" />
 <title>Astro</title>
 	</head>
 	
 	<body>
 
 <Nav />
-	
 
-		<Headingpill />
+<div class="containerabout">
+	<img src="./images/heroimage.jpg" alt="heroimage" class="imghero">
+
+	<div class="services">
+			<Headingpill />
+		<h2>Creative Services For Boost Your Business Growth</h2>
+	</div>
+</div>
+<!-- ------------------------- -->
+<div class="flexh2box">
+<div>
+	<Headingpill />
+<h3 class="turnyour">Turn your ideas into reality.</h3>
+
+<p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
+<p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day.</p>
+<p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital.</p>
+</div>
+<figure>
+<img src="./images/h2photo.jpg" alt="" class="h2img">
+</figure>
+</div>
+<!-- -------------------------- -->
+<section class="flex4">
+<div>
+<h3>1128+</h3>
+<p>Successful Work</p>
+</div>
+<div>
+<h3>908+</h3>
+<p>Team member</p>
+</div>
+<div>
+<h3>258+</h3>
+<p>Happy Customers</p>
+</div>
+<div>
+<h3>564+</h3>
+<p>Creative Idea</p>
+</div>
+</section>
+<!-- -------------- -->
+<div class="cards1">
+<div class="cards">
+	<div>
+	<Headingpill />
+<h3 class="turnyour">
+
+	Our core values & principles
+</h3>
+<div class="buttonflex">
+<p class="pcard">Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
+<Button />
+</div>
+	</div>
+<div class="cardsflex">
+<Card />
+<Card />
+<Card />
+<Card />
+</div>
+</div>
+</div>
+<!-- ----------------------- -->
+<div class="divvid">
+<Headingpill />
+<h3 class="h3vid">Better Website Means A User Experience</h3>
+<p class="pvid">Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team and individual achievements.</p>
+
+<div class="playbutton">
+<img src="../images/imgvid.jpg" alt="" class="imgvid">
+  
+</div>
+</div>
+<!-- --------------------------------- -->
+<div class="faceall">
+<div class="facetekst">
+<Headingpill />
+<h3 class="turnyour">We champion the bold to achieve the extraordinary
+</h3>
+<p>Ippsum is the result of synergy between our teams and our customers. Our company culture is focused on excellent productivity, customer satisfaction, respect for team.</p>
+</div>
+
+<div class="faceflex">
+<Facecards />
+<Facecards />
+<Facecards />
+</div>
+</div>
+ <Icon name="globe" />
+<!-- 
+ -->
 		<Button />
 		<Card />
 		<Scrolling />
-		<Footer />
+
 	</body>
 </html>
 
 <style>
+
+	/********************************* Heroimage */
 h1{
 	 font-family: "Lato", sans-serif;
 }
+.containerabout {
+  display: grid;
+  place-items: center;
+}
+.imghero {
+  width: 100%;
+}
+.imghero,
+.services {
+   grid-area: 1 / 1;
+
+}
+.services{
+	padding: 3rem 3.75rem 3.625rem 3.75rem;
+border-radius: 1.8125rem;
+background: rgba(255, 255, 255, 0.85);
+
+backdrop-filter: blur(5.5px);
+display: inline-flex;
+
+flex-direction: column;
+align-items: flex-start;
+gap: 0.625rem;
+
+}
+h2{
+	color: #181818;
+
+  font-family: "Cabin", sans-serif;
+font-size: 3.125rem;
+font-style: normal;
+font-weight: 700;
+line-height: 3.625rem; /* 3.625rem */
+}
+/**************************************************/
+.flexh2box{
+display: flex;
+flex-direction: row;
+gap: 10%;
+max-width: 1000px;
+margin: auto;
+
+}
+.turnyour{
+	color: #181818;
+
+  font-family: "Cabin", sans-serif;
+font-size: 2.8125rem;
+font-style: normal;
+font-weight: 700;
+line-height: 116%; /* 3.2625rem */
+}
+.h2img{
+	align-self: flex-start;
+	 width: 100%;
+ /* display: block;*/
+ 
+}
+figure {
+  margin-inline: auto;
+  max-inline-size: 400px;
+  margin: 3rem;
+  display: block;
+  position: relative;
+  
+  &::before{
+    content: '';
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    background: green;
+    width: 150px;
+height: 100px;
+    border-radius: 20px;
+    z-index: -1;
+  }
+}
+/**************************************************/  
+section{
+	display: flex;
+place-content: center;
+:nth-child{
+	margin: 20%;
+}
+}
+
+.cards1{
+	background: #E5E5E5;
+}
+.cards{
+
+	display: flex;
+max-width: 1000px;
+padding: 6.25rem;
+flex-direction: column;
+align-self: flex-start;
+gap: 0.625rem;
+margin: auto;
+}
+.cardsflex{
+	display: flex;
+	/*align-items: flex-start;
+	place-content: center;*/
+
+gap: 0.9375rem;;
+
+}
+.pcard{
+	color: #595566;
+
+font-family: Lato;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 147.5%; /* 1.475rem */
+
+ 
 
 
+}
+.buttonflex{
+	display: flex;
+
+}
+/* ************************************************/
+.divvid{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+ 
+  margin: auto;
+}
+.h3vid{
+	color: #181818;
+text-align: center;
+ max-width: 500px;
+  font-family: "Cabin", sans-serif;
+font-size: 2.8125rem;
+font-style: normal;
+font-weight: 700;
+line-height: 116%;
+}
+p{color: #595566;
+
+font-family: Lato;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 147.5%; }
+.pvid{
+	color: #595566;
+ max-width: 800px;
+text-align: center;
+font-family: Lato;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 147.5%; 
+}
+.imgvid{
+	border-radius: 1.75rem;
+	margin-bottom: 50px;
+	
+}
+[data-icon="globe"] {    
+    width: 3.3rem;    
+    height: 3.3rem;  }
+
+.playbutton{
+	
+  display: grid;
+  place-items: center;
+
+}
+.play{
+	grid-area: 1 / 1;
+}
+
+
+/* ****************************** */
+.faceall{
+	background: #E5E5E5;
+}
+
+.facetekst{
+		
+
+padding: 6.25rem;
+
+gap: 0.625rem;
+
+}
+
+
+.faceflex{
+		display: flex;
+		max-width: 1000px;
+	align-items: flex-start;
+	place-content: center;
+margin: auto;
+gap: 0.9375rem;;
+}
 
 </style>
